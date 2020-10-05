@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "test": "mocha -r ts-node/register test/**/*.spec.ts"
   },
   "repository": {
