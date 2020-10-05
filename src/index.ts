@@ -5,7 +5,9 @@ import { DangerLinqFunctionMapping } from "./DangerLinqFunctionMapping";
 
 const cache = new Map<DangerLinqFunction, Function>();
 
+/** Creates a new array by applying the supplied function to every element in the source array. */
 export function DangerLinq(func: DangerLinqFunction.Map): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Map]>;
+/** Sorts an array by adding items to an array after a delay determined by their cardinality. Potentially stable. */
 export function DangerLinq(func: DangerLinqFunction.SleepSort): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.SleepSort]>;
 export async function DangerLinq(func: DangerLinqFunction) {
   // @ts-ignore
