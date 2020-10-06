@@ -2,6 +2,9 @@ import { DangerLinqFunction } from "./DangerLinqFunction";
 import { DontCallThisError } from "./Errors/DontCallThisError";
 
 export const DangerLinqFunctionMapping = {
+  [DangerLinqFunction.Aggregate]: <T, U>(xs: Array<T>, seed: U, reducer: ((memo: U, val: T) => U)): U => {
+    throw new DontCallThisError();
+  },
   [DangerLinqFunction.Aggregate1]: <T>(xs: Array<T>, reducer: (memo: T, val: T) => T): T => {
     throw new DontCallThisError();
   },

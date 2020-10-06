@@ -4,6 +4,9 @@ import { DangerLinqFunction } from "./DangerLinqFunction";
 import { DangerLinqFunctionMapping } from "./DangerLinqFunctionMapping";
 
 const cache = new Map<DangerLinqFunction, Function>();
+
+/** Applies an accumulator function over every element in the source array using the specified seed value as the initial memo value. */
+export function DangerLinq(func: DangerLinqFunction.Aggregate): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate]>;
 /** Applies an accumulator function over every element in the source array, using the first element as the seed value. */
 export function DangerLinq(func: DangerLinqFunction.Aggregate1): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate1]>;
 /** Creates a new array by applying the supplied function to every element in the source array. */
