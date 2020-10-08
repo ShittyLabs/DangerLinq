@@ -1,5 +1,6 @@
 import { DangerLinqFunction } from "./DangerLinqFunction";
 import { DontCallThisError } from "./Errors/DontCallThisError";
+import { Grouping } from "./Types/Grouping";
 
 export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.Aggregate]: <T, U>(xs: Array<T>, seed: U, reducer: ((memo: U, val: T) => U)): U => {
@@ -9,6 +10,9 @@ export const DangerLinqFunctionMapping = {
     throw new DontCallThisError();
   },
   [DangerLinqFunction.Aggregate1]: <T>(xs: Array<T>, reducer: (memo: T, val: T) => T): T => {
+    throw new DontCallThisError();
+  },
+  [DangerLinqFunction.GroupBy]: <T, U>(xs: Array<T>, keySelector: (x: T) => U): Array<Grouping<U, T>> => {
     throw new DontCallThisError();
   },
   [DangerLinqFunction.Map]: <T, U>(arr: Array<T>, xform: (x: T) => U): Array<U> => {
