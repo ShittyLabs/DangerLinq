@@ -4,7 +4,7 @@ Follow these steps to add a function to this library.
 ## General
 1. Clone the repo
 1. Run `npm install` in the repo
-1. Find [an issue]() to contribute to
+1. Find [an issue](https://github.com/ShittyLabs/DangerLinq/issues) to contribute to
 1. Create a branch for the issue
 
 ## Adding a function
