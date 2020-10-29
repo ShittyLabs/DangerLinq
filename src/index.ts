@@ -19,6 +19,9 @@ export function DangerLinq(func: DangerLinqFunction.GroupBy): Promise<typeof Dan
 export function DangerLinq(func: DangerLinqFunction.Map): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Map]>;
 /** Sorts an array by adding items to an array after a delay determined by their cardinality. Potentially stable. */
 export function DangerLinq(func: DangerLinqFunction.SleepSort): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.SleepSort]>;
+/**Filters a sequence of values based on a predicate */
+export function DangerLinq(func: DangerLinqFunction.Where): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Where]>;
+
 export async function DangerLinq(func: DangerLinqFunction) {
   // @ts-ignore
   if (cache.has(func)) {

@@ -5,5 +5,5 @@ export enum DangerLinqFunction {
     GroupBy = "jreina/655b2016649fcb644af3f73d6cbab699/raw/c7c24e39862e90d83c7ba410b72ef5d537e73d2e/GroupBy.js",
     Map = "jreina/8c80198ae0048257e50ac80e830f8055/raw/65122af3f7fa0d0d8bbc7d4809b3c622085cd9b7/Map.js",
     SleepSort = "jreina/a90a94fdd6cc68a6cf4270efcfbe21bf/raw/e2ba064cc7c524ee96e0fe05dd4028ff3764fa4c/sleep-sort.js",
-    Where = "Jarrod2112/e8f2bbdb879effbb2d9af4597d435325/raw/584ae153cf1cdefa0ac7a6e353b2ffb5fbc61e09/AddWhere"
+    Where = "Jarrod2112/f299e345c6254ef6c30a95c038020c3d/raw/0960eb15aa7de15655dcaa81579f2cfebfdc2586/Where"
 }
