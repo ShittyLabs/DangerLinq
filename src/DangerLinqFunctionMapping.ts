@@ -15,10 +15,13 @@ export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.GroupBy]: <T, U>(xs: Array<T>, keySelector: (x: T) => U): Array<Grouping<U, T>> => {
     throw new DontCallThisError();
   },
+  [DangerLinqFunction.Last]: <T>(xs: Array<T>): T => {
+    throw new DontCallThisError();
+  },
   [DangerLinqFunction.Map]: <T, U>(arr: Array<T>, xform: (x: T) => U): Array<U> => {
     throw new DontCallThisError();
   },
   [DangerLinqFunction.SleepSort]: <T>(arr: Array<T>, ord: (x: T) => number): Promise<Array<T>> => {
     throw new DontCallThisError();
   },
-};
+  };
