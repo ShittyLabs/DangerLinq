@@ -27,4 +27,7 @@ export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.SleepSort]: <T>(arr: Array<T>, ord: (x: T) => number): Promise<Array<T>> => {
     throw new DontCallThisError();
   },
+  [DangerLinqFunction.Where]: <T>(arr: Array<T>, predicate: (x: T) => boolean): Array<T> => {
+    throw new DontCallThisError();
+  },
 };
