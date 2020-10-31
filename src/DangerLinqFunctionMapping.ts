@@ -3,13 +3,19 @@ import { DontCallThisError } from "./Errors/DontCallThisError";
 import { Grouping } from "./Types/Grouping";
 
 export const DangerLinqFunctionMapping = {
-  [DangerLinqFunction.Aggregate]: <T, U>(xs: Array<T>, seed: U, reducer: ((memo: U, val: T) => U)): U => {
+  [DangerLinqFunction.Aggregate]: <T, U>(xs: Array<T>, seed: U, reducer: (memo: U, val: T) => U): U => {
     throw new DontCallThisError();
   },
-  [DangerLinqFunction.Aggregate2]: <T, U, V>(xs: Array<T>, seed: U, reducer: (memo: U, val: T) => U, resultSelector: ((val: U) => V)): V => {
+  [DangerLinqFunction.Aggregate2]: <T, U, V>(xs: Array<T>, seed: U, reducer: (memo: U, val: T) => U, resultSelector: (val: U) => V): V => {
     throw new DontCallThisError();
   },
   [DangerLinqFunction.Aggregate1]: <T>(xs: Array<T>, reducer: (memo: T, val: T) => T): T => {
+    throw new DontCallThisError();
+  },
+  [DangerLinqFunction.Batch]: <T>(xs: Array<T>, size: number): Array<T> => {
+    throw new DontCallThisError();
+  },
+  [DangerLinqFunction.Batch1]: <T, U>(xs: Array<T>, size: number, resultSelector: (val: Array<T>) => U): Array<U> => {
     throw new DontCallThisError();
   },
   [DangerLinqFunction.GroupBy]: <T, U>(xs: Array<T>, keySelector: (x: T) => U): Array<Grouping<U, T>> => {
