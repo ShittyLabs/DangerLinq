@@ -12,6 +12,9 @@ export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.Aggregate1]: <T>(xs: Array<T>, reducer: (memo: T, val: T) => T): T => {
     throw new DontCallThisError();
   },
+  [DangerLinqFunction.Any1]: <T>(xs: Array<T>, predicate: (x: T) => boolean): boolean => {
+    throw new DontCallThisError();
+  },
   [DangerLinqFunction.Batch]: <T>(xs: Array<T>, size: number): Array<T> => {
     throw new DontCallThisError();
   },

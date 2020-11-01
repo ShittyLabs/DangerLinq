@@ -13,6 +13,8 @@ export function DangerLinq(func: DangerLinqFunction.Aggregate): Promise<typeof D
 export function DangerLinq(func: DangerLinqFunction.Aggregate1): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate1]>;
 /** Applies an accumulator function over every element in the source array using the specified seed value as the initial memo value, and applies the result selector to the result. */
 export function DangerLinq(func: DangerLinqFunction.Aggregate2): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate2]>;
+/** Determines whether any element of a sequence satisfies a condition */
+export function DangerLinq(func: DangerLinqFunction.Any1): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Any1]>;
 /** Applies a function to batch the source sequence into sized buckets. */
 export function DangerLinq(func: DangerLinqFunction.Batch): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Batch]>;
 /** Applies a function to batch the source sequence into sized buckets and applies a projection to each bucket. */
@@ -25,7 +27,6 @@ export function DangerLinq(func: DangerLinqFunction.Map): Promise<typeof DangerL
 export function DangerLinq(func: DangerLinqFunction.SleepSort): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.SleepSort]>;
 /**Filters a sequence of values based on a predicate */
 export function DangerLinq(func: DangerLinqFunction.Where): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Where]>;
-
 export async function DangerLinq(func: DangerLinqFunction) {
   // @ts-ignore
   if (cache.has(func)) {
