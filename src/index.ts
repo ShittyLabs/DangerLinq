@@ -2,7 +2,7 @@ import got from "got";
 
 import { DangerLinqFunction } from "./DangerLinqFunction";
 import { DangerLinqFunctionMapping } from "./DangerLinqFunctionMapping";
-import { Grouping as grouping } from './Types/Grouping';
+import { Grouping as grouping } from "./Types/Grouping";
 const Grouping = grouping;
 
 const cache = new Map<DangerLinqFunction, Function>();
@@ -15,6 +15,10 @@ export function DangerLinq(func: DangerLinqFunction.Aggregate1): Promise<typeof 
 export function DangerLinq(func: DangerLinqFunction.Aggregate2): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate2]>;
 /** Determines if a sequence contains any elements */
 export function DangerLinq(func: DangerLinqFunction.Any): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Any]>;
+/** Applies a function to batch the source sequence into sized buckets. */
+export function DangerLinq(func: DangerLinqFunction.Batch): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Batch]>;
+/** Applies a function to batch the source sequence into sized buckets and applies a projection to each bucket. */
+export function DangerLinq(func: DangerLinqFunction.Batch1): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Batch1]>;
 /** Applies a function to each value in the input array and groups the array values according to the result. */
 export function DangerLinq(func: DangerLinqFunction.GroupBy): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.GroupBy]>;
 /** Returns last element of a sequence */
@@ -23,6 +27,9 @@ export function DangerLinq(func: DangerLinqFunction.Last): Promise<typeof Danger
 export function DangerLinq(func: DangerLinqFunction.Map): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Map]>;
 /** Sorts an array by adding items to an array after a delay determined by their cardinality. Potentially stable. */
 export function DangerLinq(func: DangerLinqFunction.SleepSort): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.SleepSort]>;
+/**Filters a sequence of values based on a predicate */
+export function DangerLinq(func: DangerLinqFunction.Where): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Where]>;
+
 export async function DangerLinq(func: DangerLinqFunction) {
   // @ts-ignore
   if (cache.has(func)) {
