@@ -12,6 +12,9 @@ export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.Aggregate1]: <T>(xs: Array<T>, reducer: (memo: T, val: T) => T): T => {
     throw new DontCallThisError();
   },
+  [DangerLinqFunction.Any]: <T>(xs: Array<T>): boolean => {
+    throw new DontCallThisError();
+  },
   [DangerLinqFunction.GroupBy]: <T, U>(xs: Array<T>, keySelector: (x: T) => U): Array<Grouping<U, T>> => {
     throw new DontCallThisError();
   },
@@ -24,4 +27,4 @@ export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.SleepSort]: <T>(arr: Array<T>, ord: (x: T) => number): Promise<Array<T>> => {
     throw new DontCallThisError();
   },
-  };
+};
