@@ -13,6 +13,8 @@ export function DangerLinq(func: DangerLinqFunction.Aggregate): Promise<typeof D
 export function DangerLinq(func: DangerLinqFunction.Aggregate1): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate1]>;
 /** Applies an accumulator function over every element in the source array using the specified seed value as the initial memo value, and applies the result selector to the result. */
 export function DangerLinq(func: DangerLinqFunction.Aggregate2): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Aggregate2]>;
+/** Determines if a sequence contains any elements */
+export function DangerLinq(func: DangerLinqFunction.Any): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Any]>;
 /** Applies a function to batch the source sequence into sized buckets. */
 export function DangerLinq(func: DangerLinqFunction.Batch): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Batch]>;
 /** Applies a function to batch the source sequence into sized buckets and applies a projection to each bucket. */
