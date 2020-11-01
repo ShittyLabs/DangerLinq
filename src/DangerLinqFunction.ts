@@ -2,6 +2,7 @@ export enum DangerLinqFunction {
   Aggregate = "jreina/902da5688cb96d55af41e05c023b374e/raw/3866f8a3c86a26dc14832d42fe6ab062b9baa478/Aggregate.js",
   Aggregate1 = "jreina/0f4dab07c6be88054df6de0f350d3f76/raw/84116870af9aa3c42997c89b1240d4ad6d85c095/Aggregate1.js",
   Aggregate2 = "jreina/de6bfd33867a60ee9c06537b49dfa9f7/raw/45fe74147e683dd74daf29de7d038407a094f501/Aggregate2.js",
+  Any1 = "todo.js",
   Batch = "the-pat/d5a1bfca21be2beafad0a6a7559013e0/raw/a994a899302f07475ebb99041ac9d4c53aa81776/Batch.js",
   Batch1 = "the-pat/f7588fca09549c30de33808a900cc60f/raw/1532ea284bac98acd72a4ff3d49b203969def63d/Batch1.js",
   GroupBy = "jreina/655b2016649fcb644af3f73d6cbab699/raw/c7c24e39862e90d83c7ba410b72ef5d537e73d2e/GroupBy.js",
