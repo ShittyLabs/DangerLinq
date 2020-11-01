@@ -21,6 +21,9 @@ export const DangerLinqFunctionMapping = {
   [DangerLinqFunction.GroupBy]: <T, U>(xs: Array<T>, keySelector: (x: T) => U): Array<Grouping<U, T>> => {
     throw new DontCallThisError();
   },
+  [DangerLinqFunction.Last]: <T>(xs: Array<T>): T => {
+    throw new DontCallThisError();
+  },
   [DangerLinqFunction.Map]: <T, U>(arr: Array<T>, xform: (x: T) => U): Array<U> => {
     throw new DontCallThisError();
   },
@@ -29,5 +32,5 @@ export const DangerLinqFunctionMapping = {
   },
   [DangerLinqFunction.Where]: <T>(arr: Array<T>, predicate: (x: T) => boolean): Array<T> => {
     throw new DontCallThisError();
-  },
+  }
 };

@@ -19,6 +19,8 @@ export function DangerLinq(func: DangerLinqFunction.Batch): Promise<typeof Dange
 export function DangerLinq(func: DangerLinqFunction.Batch1): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Batch1]>;
 /** Applies a function to each value in the input array and groups the array values according to the result. */
 export function DangerLinq(func: DangerLinqFunction.GroupBy): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.GroupBy]>;
+/** Returns last element of a sequence */
+export function DangerLinq(func: DangerLinqFunction.Last): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Last]>;
 /** Creates a new array by applying the supplied function to every element in the source array. */
 export function DangerLinq(func: DangerLinqFunction.Map): Promise<typeof DangerLinqFunctionMapping[DangerLinqFunction.Map]>;
 /** Sorts an array by adding items to an array after a delay determined by their cardinality. Potentially stable. */
